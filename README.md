@@ -50,3 +50,8 @@ async def main():
 if __name__ == "__main__":
     asyncio.run(main())
 ```
+
+
+# Personal thoughts
+
+#### This has only been tested on a windows 11 machine, I do however believe it will work better on a MacOS or linux machine, I did not have access to one of those when writing this!
