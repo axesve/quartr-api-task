@@ -1,4 +1,3 @@
-import asyncio
 import aiohttp
 import logging
 from enum import StrEnum
@@ -67,7 +66,7 @@ class AsyncSecFetcher:
                 filing_url = f"https://www.sec.gov/Archives/edgar/data/{ticker.value}/{acc_num_clean}/{url}"
                 
                 try:
-                    return await self.pdf_converter.fetch_and_save_10k(ticker.name, filing_url, date)
+                    return await self.pdf_converter.save_pdf(ticker.name, date, filing_url)
                 except Exception as e:
                     self.logger.warning(f"Failed to fetch 10-K for {ticker.name} from {filing_url}: {e}")
                     break

@@ -1,5 +1,4 @@
 import os
-import aiofiles
 import logging
 from typing import Optional
 
@@ -17,7 +16,7 @@ class AsyncPDFConverter:
 
     async def save_pdf(self, ticker: str, filing_date: str, filing_url: str) -> str:
         """
-        Asynchronously save the HTML content as a PDF under year/ticker/ directory structure.
+        Asynchronously save the URL as a PDF under year/ticker/ directory structure.
         """
         year = filing_date[:4]
 
@@ -37,9 +36,3 @@ class AsyncPDFConverter:
         except Exception as e:
             self.logger.error(f"Error saving PDF: {e}")
             raise
-
-    async def fetch_and_save_10k(self, ticker_name: str, filing_url: str, date: str) -> str:
-        """
-        Asynchronously fetch the HTML from the SEC filing URL and save it as a PDF.
-        """
-        return await self.save_pdf(ticker_name, date, filing_url)
