@@ -7,7 +7,6 @@ A Python-based asynchronous tool for downloading 10-K filings from the SEC EDGAR
 This project requires Python 3.8+ and the following packages:
 
 - `aiohttp` - Asynchronous HTTP client
-- `aiofiles` - Asynchronous file I/O
 - `pdfkit` - A Python wrapper for wkhtmltopdf (converts HTML to PDF)
 - `wkhtmltopdf` - A command-line tool to render HTML to PDF
 
